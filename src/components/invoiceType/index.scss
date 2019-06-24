@@ -1,0 +1,36 @@
+.xforce-invoice-type {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0 5px;
+  @mixin style($color) {
+    color: $color;
+    path {
+      fill: $color;
+    }
+  }
+  &.primary {
+    @include style(#1890ff);
+  }
+  &.success {
+    @include style(#3ee15f);
+  }
+  &.warning {
+    @include style(#fd8920);
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    line-height: 1;
+  }
+}
